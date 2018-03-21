@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Enzyme from 'enzyme';
 import { shallow, mount, render } from 'enzyme';
 import EnzymeAdapter from 'enzyme-adapter-react-16';
-import Welcome from './Welcome';
+import Welcome from '../components/Welcome';
 
 Enzyme.configure({adapter: new EnzymeAdapter() });
 
