@@ -10,7 +10,7 @@ Enzyme.configure({adapter: new EnzymeAdapter() });
 it('renders without crashing', () => {
   const div = document.createElement('div');
   div.id = "root"
-  ReactDOM.render(<Welcome />, div);;
+  ReactDOM.render(<Welcome />, div);
 });
 
 it ('welcomes the user with their username', () => {
