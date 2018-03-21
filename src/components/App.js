@@ -1,6 +1,6 @@
 import React from 'react';
 import Welcome from './Welcome';
-import Budget from './Budget';
+import Income from './Income';
 
 class App extends React.Component {
   render() {
@@ -8,7 +8,7 @@ class App extends React.Component {
       <div>
         <p> Tracker </p>
         <Welcome />
-        <Budget />
+        <Income />
       </div>
     );
   }
