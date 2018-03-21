@@ -15,5 +15,5 @@ it ('renders component without crashing', () => {
 
 it('allows you to set your budget', () => {
   const page = mount(<Income />);
-  expect(page.text()).toMatch('Set Budget:')
+  expect(page.text()).toMatch('Set Income:')
 })
