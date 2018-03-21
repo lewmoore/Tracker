@@ -12,3 +12,9 @@ it('renders without crashing', () => {
   div.id = "root"
   ReactDOM.render(<Welcome />, div);;
 });
+
+
+it ('welcomes the user with their username', () => {
+  const page = mount(<Welcome />);
+  expect(page.text()).toMatch('Welcome to Tracker Lewis')
+})
