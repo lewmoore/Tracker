@@ -12,3 +12,8 @@ it ('renders component without crashing', () => {
   div.id = 'root'
   ReactDOM.render(<Budget />, div);
 })
+
+it('allows you to set your budget', () => {
+  const page = mount(<Budget />);
+  expect(page.text()).toMatch('Set Budget:')
+})

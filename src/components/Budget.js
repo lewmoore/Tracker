@@ -13,13 +13,13 @@ class Budget extends React.Component {
 
   handleChange (e) {
     this.setState({
-      username: e.target.value
+      budget: e.target.value
     })
   }
   render() {
     return (
       <div>
-        <p> Set Budget: </p>
+        Set Budget:
         <input
           type='text'
           value={this.state.budget}
