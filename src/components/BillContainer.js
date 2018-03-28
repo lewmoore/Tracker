@@ -6,7 +6,10 @@ class BillContainer extends React.Component {
     super(props)
 
     this.state = {
-      bills: ['Rent', 'Netflix']
+      bills: [
+        'Rent',
+        'Netflix'
+      ]
     }
   }
   render() {

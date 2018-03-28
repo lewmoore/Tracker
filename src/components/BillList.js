@@ -5,7 +5,7 @@ class BillList extends React.Component {
     return (
       <div>
         <p> Bills: </p>
-          <ul> {this.props.bills.map((bill) => <li>{bill} </li>)} </ul>
+          {this.props.bills.map((bill) => { return <div key={'mykey' + bill}> <ul>{bill}</ul></div>})}
       </div>
     )
   }
