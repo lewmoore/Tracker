@@ -20,7 +20,7 @@ class Income extends React.Component {
     return (
       <div>
         <p> Set Income: </p>
-        <input
+        <input id='income'
           type='text'
           value={this.state.income}
           onChange={this.handleChange}
