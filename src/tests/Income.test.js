@@ -21,11 +21,11 @@ it('allows you to set your budget', () => {
 
 it('responds to a change in income', () => {
   const handleChangeSpy = Sinon.spy(Income.prototype, 'handleChange');
-  // const event = {target: {value: '1000'}};
+  const event = {target: {value: '1000'}};
   const wrapper = shallow(
     <Income />
   );
-  wrapper.find('div').simulate('change', {target: {value: '1000'}});
+  wrapper.find('input').simulate('change', event);
   expect(handleChangeSpy.calledOnce).toEqual(true)
 })
 
