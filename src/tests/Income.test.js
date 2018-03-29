@@ -28,13 +28,3 @@ it('responds to a change in income', () => {
   wrapper.find('input').simulate('change', event);
   expect(handleChangeSpy.calledOnce).toEqual(true)
 })
-
-
-
-// const handleChangeMock = jest.fn();
-// const event = {
-//   target: { value: '1000' }
-// };
-// const component = Enzyme.shallow(<Income income={handleChangeMock}/>);
-// component.find('input').simulate('change', event);
-// expect(handleChangeMock).toBeCalledWith('1000')
