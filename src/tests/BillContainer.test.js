@@ -13,4 +13,12 @@ describe('BillContainer component', () => {
     div.id = "root"
     ReactDOM.render(<BillContainer />, div);;
   });
+
+  it('Adds a bill to the bills array', () => {
+    const wrapper = shallow(
+      <BillContainer />
+    );
+    wrapper.instance().addBill('Rent')
+    expect(wrapper.instance().state.bills).toEqual(['Rent'])
+  })
 })
