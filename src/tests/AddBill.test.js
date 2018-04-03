@@ -23,3 +23,13 @@ it('Adds a bill to the list', () => {
   wrapper.find('button').simulate('click');
   expect(clickSpy.calledOnce).toEqual(true)
 })
+
+it('Responds to adding a new bill', () => {
+  const handleChangeSpy = Sinon.spy(AddBill.prototype, 'updateNewBill');
+  const event = {target: {value: 'Netflix'}};
+  const wrapper = shallow(
+    <AddBill />
+  );
+  wrapper.find('input').simulate('change', event);
+  expect(handleChangeSpy.calledOnce).toEqual(true)
+})
