@@ -21,4 +21,11 @@ describe('BillContainer component', () => {
     wrapper.instance().addBill('Rent')
     expect(wrapper.instance().state.bills).toEqual(['Rent'])
   })
+
+  it('Component renders with an empty array', () => {
+    const wrapper = shallow(
+      <BillContainer />
+    );
+    expect(wrapper.instance().state.bills).toEqual([])
+  })
 })
