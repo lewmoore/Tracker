@@ -13,3 +13,10 @@ it('renders the component', () => {
   );
   expect(wrapper.text()).toMatch('Bills:')
 })
+
+it('takes and renders given props', () => {
+  const wrapper = shallow(
+    <BillList bills={["Netflix"]} />
+  )
+  expect(wrapper.text()).toMatch('Netflix')
+})
