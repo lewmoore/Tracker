@@ -11,7 +11,7 @@ class BillList extends React.Component {
   }
 }
 BillList.defaultProps = {
-  names: []
+  bills: []
 }
 
 export default BillList;

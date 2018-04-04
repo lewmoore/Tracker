@@ -6,3 +6,10 @@ import EnzymeAdapter from 'enzyme-adapter-react-16';
 import BillList from '../components/BillList';
 
 Enzyme.configure({adapter: new EnzymeAdapter() });
+
+it('renders the component', () => {
+  const wrapper = shallow(
+    <BillList />
+  );
+  expect(wrapper.text()).toMatch('Bills:')
+})
