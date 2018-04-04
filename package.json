@@ -2,6 +2,10 @@
   "name": "tracker",
   "version": "0.1.0",
   "private": true,
+  "jest": {
+    "verbose": true
+  },
+
   "dependencies": {
     "babel-core": "^6.26.0",
     "babel-jest": "^22.4.3",
