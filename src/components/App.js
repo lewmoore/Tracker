@@ -7,12 +7,10 @@ class App extends React.Component {
   render() {
     return (
       <div>
-      <center>
         <p> Tracker </p>
         <Welcome />
         <Income />
         <BillContainer />
-        </center>
       </div>
     );
   }
