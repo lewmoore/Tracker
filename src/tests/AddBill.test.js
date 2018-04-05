@@ -30,6 +30,6 @@ it('Responds to adding a new bill', () => {
   const wrapper = shallow(
     <AddBill />
   );
-  wrapper.find('input').simulate('change', event);
+  wrapper.find('input[id="addBill"]').simulate('change', event);
   expect(handleChangeSpy.calledOnce).toEqual(true)
 })

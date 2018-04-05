@@ -27,7 +27,7 @@ class AddBill extends React.Component {
   render() {
     return (
       <div>
-        <input
+        <input id='addBill'
           type='text'
           value={this.state.newBill}
           onChange={this.updateNewBill}
