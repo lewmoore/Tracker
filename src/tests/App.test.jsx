@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Enzyme from 'enzyme';
-import { shallow, mount, render } from 'enzyme';
+import { shallow } from 'enzyme';
 import EnzymeAdapter from 'enzyme-adapter-react-16';
 import App from '../components/App';
 
@@ -10,7 +10,7 @@ Enzyme.configure({adapter: new EnzymeAdapter() });
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  div.id = "root"
+  div.id = 'root'
   ReactDOM.render(<App />, div);;
 });
 
