@@ -9,7 +9,7 @@ Enzyme.configure({adapter: new EnzymeAdapter() });
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  div.id = "root"
+  div.id = 'root'
   ReactDOM.render(<Welcome />, div);
 });
 
