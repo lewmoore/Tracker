@@ -1,28 +1,42 @@
 import React from 'react';
 import BillList from './BillList';
-import AddBill from './AddBill';
+import BillForm from './BillForm';
 
 class BillContainer extends React.Component {
   constructor(props) {
     super(props)
 
     this.state = {
-      bills: [
-      ]
+      billNames: [],
+      billCosts: []
     }
 
-    this.addBill = this.addBill.bind(this)
+    this.addBillName = this.addBillName.bind(this)
+    this.addBillCost = this.addBillCost.bind(this)
   }
-  addBill(bill) {
+
+
+  addBillName(billName) {
+    this.state.billNames.push(billName)
+  }
+
+  // addBillCost(billCost) {
+  //   this.state.billCosts.push(billCost)
+  // }
+
+  addBillCost(billCost) {
     this.setState((state) => ({
-      bills: state.bills.concat([bill])
-    }));
+      bills: state.billCosts.concat([billCost])
+    }))
   }
+
   render() {
     return (
+      console.log(this.state.billCosts),
+      console.log(this.state.billNames),
       <div>
-      <AddBill addNew={this.addBill} />
-        <BillList bills={this.state.bills} />
+        <BillForm addNewBillName={this.addBillName} addNewBillCost={this.addBillCost} />
+        <BillList bills={this.state.billNames} />
       </div>
     )
   }

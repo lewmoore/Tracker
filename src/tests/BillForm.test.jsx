@@ -20,10 +20,21 @@ describe('BillForm component', () => {
   it('calls handleSubmit fn on click', () => {
     const handleChangeSpy = Sinon.spy(BillForm.prototype, 'handleSubmit')
     const wrapper = shallow(
-      <BillForm />
+      <BillForm addNewBillCost={() => {}} addNewBillName={() => {}}/>
     );
     const event = { preventDefault() {}};
     wrapper.find('form').simulate('submit', event)
     expect(handleChangeSpy.calledOnce).toEqual(true)
   })
+
+
+  // it('user input is displayed onClick', () => {
+  //   // handleChangeSpy = Sinon.spy(BillForm.prototype, 'handleSubmit')
+  //   const wrapper = shallow(
+  //     <BillForm addNewBillName={() => {}} addNewBillCost={() => {}}/>
+  //   );
+  //   const event = { target: { value: 'Netflix' }, preventDefault() {} }
+  //   wrapper.find('form').simulate('submit', event)
+  //   expect(wrapper.text()).toMatch('Netflix')
+  // })
 })

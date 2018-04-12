@@ -18,14 +18,14 @@ describe('BillContainer component', () => {
     const wrapper = shallow(
       <BillContainer />
     );
-    wrapper.instance().addBill('Rent')
-    expect(wrapper.instance().state.bills).toEqual(['Rent'])
+    wrapper.instance().addBillName('Rent')
+    expect(wrapper.instance().state.billNames).toEqual(['Rent'])
   })
 
   it('Component renders with an empty array', () => {
     const wrapper = shallow(
       <BillContainer />
     );
-    expect(wrapper.instance().state.bills).toEqual([])
+    expect(wrapper.instance().state.billNames).toEqual([])
   })
 })

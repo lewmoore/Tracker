@@ -11,7 +11,7 @@ class App extends React.Component {
         <p> Tracker </p>
         <Welcome />
         <Income />
-        <BillForm />
+        <BillContainer />
       </div>
     );
   }
