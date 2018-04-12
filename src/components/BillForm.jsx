@@ -12,10 +12,10 @@ class BillForm extends React.Component {
         <p> Enter your Bills: </p>
         <form onSubmit={this.handleSubmit}>
           <label>
-            Bill: 
-          </label>
+            Bill:
           <input
             type='text' />
+        </label>
         <button type='submit'>Submit</button>
       </form>
       </div>
