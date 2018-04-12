@@ -14,7 +14,8 @@ class BillForm extends React.Component {
           <label>
             Bill:
           <input
-            type='text' />
+            type='text'
+          />
         </label>
         <button type='submit'>Submit</button>
       </form>
