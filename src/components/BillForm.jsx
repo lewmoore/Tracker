@@ -1,9 +1,15 @@
 import React from 'react';
 
 class BillForm extends React.Component {
+  constructor(props) {
+    super(props)
 
-  handleSubmit(){
+    this.handleSubmit = this.handleSubmit.bind(this);
 
+  }
+
+  handleSubmit(event){
+    event.preventDefault()
   }
 
   render() {
@@ -15,6 +21,7 @@ class BillForm extends React.Component {
             Bill:
           <input
             type='text'
+            name = 'username'
           />
         </label>
         <button type='submit'>Submit</button>

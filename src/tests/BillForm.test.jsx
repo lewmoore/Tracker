@@ -22,7 +22,8 @@ describe('BillForm component', () => {
     const wrapper = shallow(
       <BillForm />
     );
-    wrapper.find('form').simulate('submit')
+    const event = { preventDefault() {}};
+    wrapper.find('form').simulate('submit', event)
     expect(handleChangeSpy.calledOnce).toEqual(true)
   })
 })
