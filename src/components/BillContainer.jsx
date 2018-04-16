@@ -19,7 +19,7 @@ class BillContainer extends React.Component {
   addBillName(billName) {
     this.state.billNames.push(billName)
   }
-
+  
   // addBillCost(billCost) {
   //   this.state.billCosts.push(billCost)
   // }
@@ -36,7 +36,7 @@ class BillContainer extends React.Component {
       console.log(this.state.billNames),
       <div>
         <BillForm addNewBillName={this.addBillName} addNewBillCost={this.addBillCost} />
-        <BillList bills={this.state.billNames} />
+        <BillList billNames={this.state.billNames} billCosts={this.state.billCosts} />
       </div>
     )
   }
